@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {useFormik} from 'formik';
-import {loginValidation} from './formValidation';
+import {loginValidation} from './FormValidation';
 import {toast} from 'react-toastify';
 
 function LoginForm() {
