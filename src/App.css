@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body,
+input,
+button {
+	font-family: "PT Serif", serif;
+}
+
+.footers {
+	ul li {
+		color: #dfdfdffa;
+		transition: all 0.2s;
+		cursor: pointer;
+
+		&:hover {
+			color: white;
+			text-decoration: underline;
+		}
+
+	}
+
+	p {
+		color: #dfdfdffa;
+	}
+
+}
+
+#searchbox {
+	animation: bounce 0.3s ease forwards;
+}
+
+@keyframes bounce {
+	from {
+		transform: scale(0.8);
+	}
+
+	to {
+		transform: scale(1.0);
+	}
+
+}
+
+.splide__arrow {
+	background: white !important;
+	height: 4em !important;
+	border-radius: 0 !important;
+}
+
+.splide__arrow--prev {
+	left: 0 !important;
+}
+
+.splide__arrow--next {
+	right: 0 !important;
+}
+
+.banners {
+	img {
+		aspect-ratio: 1/0.3;
+		object-fit: cover;
+	}
+
+}
+
+#purchaseTable {
+}
