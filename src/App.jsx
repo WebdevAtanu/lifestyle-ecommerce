@@ -8,6 +8,7 @@ import {toast} from 'react-toastify';
 function App() {
   const [search,setSearch]=useState('');
   const [cart,setCart]=useState([]);
+  const [page,setPage]=useState(0);
     useLayoutEffect(()=>{
     toast.warn("This project isn't using any backend right now!", {
     position: "top-center",
@@ -21,7 +22,7 @@ function App() {
     });
   },[])
   return (
-    <contextStore.Provider value={{data:search,setData:setSearch,cart:cart,setCart:setCart}}>
+    <contextStore.Provider value={{data:search,setData:setSearch,cart:cart,setCart:setCart,page:page,setPage:setPage}}>
       <Router/>
       </contextStore.Provider>
       )

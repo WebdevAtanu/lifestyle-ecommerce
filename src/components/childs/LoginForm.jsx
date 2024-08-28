@@ -32,8 +32,8 @@ function LoginForm() {
 	}
 	return (
 		<div className='border border-black px-5 rounded'>
-		<p className='text-center p-2 bg-blue-800 rounded-b-2xl text-white'>LOGIN</p>
-			<form className='flex flex-col gap-2 p-5' onSubmit={formik.handleSubmit}>
+		<p className='text-center p-1 bg-blue-800 rounded-b-xl text-white'>User Login</p>
+			<form className='flex flex-col gap-2 p-3' onSubmit={formik.handleSubmit}>
 				<input type="email" name='email' onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} placeholder='johndoe@gmail.com' className='border border-gray-600 outline-0 px-2 py-1'/>
 				<span className='text-sm text-red-500'>
 					{formik.errors.email && formik.touched.email? formik.errors.email:<p> </p>}
@@ -45,7 +45,7 @@ function LoginForm() {
 				<span className='text-sm text-red-500'>
 					{formik.errors.password && formik.touched.password? formik.errors.password:<p> </p>}
 				</span>
-				<button type='submit' className='bg-blue-700 px-2 py-1 mt-3 text-white self-center'>Login</button>
+				<button type='submit' className='bg-blue-800 px-2 py-1 text-white self-center'>Login</button>
 			</form>
 		</div>
 	)

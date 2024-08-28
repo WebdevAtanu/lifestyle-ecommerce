@@ -13,7 +13,7 @@ function User() {
 			{
 				flag?
 			<p className='mt-3'>Don't have an account? <button onClick={()=>setFlag(!flag)} className='text-blue-500 hover:text-blue-600 duration-150 text-center'>Register Now</button></p>
-			:<p className='mt-3'>Already Registered? <button onClick={()=>setFlag(!flag)} className='text-blue-500 hover:text-blue-600 duration-150 text-center'>Login Now</button></p>
+			:<p className='mt-3'>Already have an account? <button onClick={()=>setFlag(!flag)} className='text-blue-500 hover:text-blue-600 duration-150 text-center'>Login Now</button></p>
 			}
 		</div>
 		<div>

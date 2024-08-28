@@ -13,7 +13,7 @@ function Home() {
 	const allDatas=allData();
 	const {data,setData}=useContext(contextStore);
 	const {cart,setCart}=useContext(contextStore);
-	const [page,setPage]=useState(0);
+	const {page,setPage}=useContext(contextStore);
 	const [product,setProduct]=useState();
 	const [message,setMessage]=useState();
 	const [showButton,setShowButton]=useState(true);
@@ -48,7 +48,7 @@ function Home() {
 	const cartFunction=(item)=>{
 		const product_data=item;
 		setCart([...cart,{product_data,quantity:1}])
-		toast.warn('Cart Added', {
+		toast.success('Cart Added', {
 		position: "top-right",
 		autoClose: 500,
 		hideProgressBar: true,
@@ -78,7 +78,7 @@ function Home() {
 		<p className='text-center text-xl'>{message}</p>
 		{
 			product?
-			<div className='container m-auto mt-5 mb-5 grid grid-cols-2 md:grid-cols-4 gap-4'>
+			<div className='container m-auto my-5 p-2 grid grid-cols-2 md:grid-cols-4 gap-4'>
 			{
 				product?.map((item,i)=>
 					<div className="border rounded p-2 flex flex-col justify-between" key={i}>

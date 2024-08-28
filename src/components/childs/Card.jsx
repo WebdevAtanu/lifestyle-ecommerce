@@ -7,9 +7,9 @@ function Card(props) {
 			<img src={props.image?props.image:'noimage.png'} alt="" className='hover:scale-110 duration-150'/>
 		</div>
 		<div className="flex flex-col justify-between items-center">
-			<p className='text-[1.1rem]'>{props.title}</p>
+			<p>{props.title}</p>
 			<p className='text-sm text-gray-500'>{props.description}...</p>
-			<p className='font-bold'><span><i className="bi bi-currency-dollar"></i></span>{props.price}</p>
+			<p><span><i className="bi bi-currency-dollar"></i></span>{props.price}</p>
 		</div>
 		</div>
 	)

@@ -35,9 +35,9 @@ function SignupForm() {
 	}
 	return (
 		<div className='border border-black px-5 rounded'>
-		<p className='text-center p-2 bg-blue-800 rounded-b-2xl text-white'>SIGNUP</p>
-			<form className='flex flex-col gap-2 p-5' onSubmit={formik.handleSubmit}>
-				<input type="text" name='uname' onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.uname} placeholder='Pravitra Pravakar' className='border border-gray-600 outline-0 px-2 py-1'/>
+		<p className='text-center p-1 bg-blue-800 rounded-b-xl text-white'>User Signup</p>
+			<form className='flex flex-col gap-2 p-3' onSubmit={formik.handleSubmit}>
+				<input type="text" name='uname' onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.uname} placeholder='Pavitra Pravakar' className='border border-gray-600 outline-0 px-2 py-1'/>
 				<span className='text-sm text-red-500'>
 					{formik.errors.uname && formik.touched.uname? formik.errors.uname:<p> </p>}
 				</span>
@@ -49,7 +49,7 @@ function SignupForm() {
 				<span className='text-sm text-red-500'>
 					{formik.errors.phone && formik.touched.phone? formik.errors.phone:<p> </p>}
 				</span>
-				<input type="email" name='email' onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} placeholder='pravitra404@gmail.com' className='border border-gray-600 outline-0 px-2 py-1'/>
+				<input type="email" name='email' onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} placeholder='pavitra404@gmail.com' className='border border-gray-600 outline-0 px-2 py-1'/>
 				<span className='text-sm text-red-500'>
 					{formik.errors.email && formik.touched.email? formik.errors.email:<p> </p>}
 				</span>
@@ -60,7 +60,7 @@ function SignupForm() {
 				<span className='text-sm text-red-500'>
 					{formik.errors.password && formik.touched.password? formik.errors.password:<p> </p>}
 				</span>
-				<button type='submit' className='bg-blue-700 px-2 py-1 mt-3 text-white self-center'>Signup</button>
+				<button type='submit' className='bg-blue-800 px-2 py-1 text-white self-center'>Signup</button>
 			</form>
 		</div>
 	)

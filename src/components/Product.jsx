@@ -9,7 +9,9 @@ function Product() {
 	const product_data=location.state;
 	const [buy,setBuy]=useState(0);
 	const [mrp,setMrp]=useState(0);
+	const[addCart,setAddCart]=useState('Add Cart');
 
+// =================random purchases handler===================
 	useEffect(()=>{
 		window.scrollTo(0,0);
 		let num1=Math.round(Math.random()*600);
@@ -18,8 +20,11 @@ function Product() {
 		setMrp(num2);
 	},[product_data])
 
-	const cartFunction=()=>{
+// =================add cart handler===================
+	const cartFunction=(e)=>{
 		setCart([...cart,{product_data,quantity:1}])
+		setAddCart('Cart Added');
+		e.target.disabled=true;
 		toast.success('Cart Added', {
 		position: "top-right",
 		autoClose: 500,
@@ -32,6 +37,7 @@ function Product() {
 		});
 	}
 
+// =================single item purchase handler===================
 	const buyFunction=()=>{
 		toast.warn('Available soon', {
 		position: "top-right",
@@ -62,12 +68,12 @@ function Product() {
 				<p className='text-2xl'>{product_data.title}</p>
 				<p className='text-gray-500'>Category: {product_data.category.name}</p>
 				<p className='mt-3'>{product_data.description}</p>
-				<div className="flex items-center">
+				<div className="flex items-center mt-2">
 				<img src="offer.jpg" alt="" className='w-[5rem] aspect-video'/>
 				<p className='font-bold'><span><i className="bi bi-currency-dollar"></i></span>{product_data.price} <span className='text-gray-500 line-through'>{mrp}</span></p>
 				</div>
 				<div className='flex gap-2 mt-5'>
-					<button onClick={cartFunction} className='w-full p-2 bg-gray-100 hover:bg-gray-300 duration-150'>Add to cart</button>
+					<button onClick={(e)=>cartFunction(e)} className='w-full p-2 bg-gray-100 hover:bg-gray-300 duration-150'>{addCart}</button>
 					<button onClick={buyFunction} className='w-full p-2 bg-blue-500 hover:bg-blue-600 text-white duration-150'>Buy now</button>
 				</div>
 				</div>
