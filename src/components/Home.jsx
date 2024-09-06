@@ -23,6 +23,7 @@ function Home() {
 	},[])
 
 	useEffect(()=>{
+		window.scrollTo(0,0);
 		if(data===null||data===''){
 			setProduct(chunkData[page]);
 			setMessage(null);

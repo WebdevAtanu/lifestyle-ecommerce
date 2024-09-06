@@ -25,7 +25,7 @@ function Header() {
 	return (
 		<div className='sticky top-0 z-20'>
 		<div className='bg-[#024f8b] px-3 py-2 flex items-center justify-between'>
-		<img src="logo.png" alt="" className='w-[18%] md:w-[13%]'/>
+		<img src="logo.png" alt="" className='w-[18%] md:w-[10%]'/>
 		<div>
 			<ul className='flex gap-3 text-white'>
 				<li><button onClick={handleClick}><i className="bi bi-search"></i></button></li>
