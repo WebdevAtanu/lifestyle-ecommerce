@@ -3,13 +3,14 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 function Banner() {
+	
 	return (
 		<div className='bg-gray-200 p-3'>
 			<Splide options={{
     			type: 'loop',
     			gap: '1rem',
     			autoplay: true,
-    			interval: 100,
+    			interval: 5000,
     			perPage: 1,
         		pagination: true,
         		arrows: true,
